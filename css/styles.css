@@ -1,0 +1,790 @@
+/* Google Fonts Implement */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Teko:wght@300;400&display=swap');
+
+
+
+/* Customize Scrollbar 
+::-webkit-scrollbar{
+  width: .6rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(136, 136, 136, 0.7);
+  border-radius: 1rem;
+} */
+
+/* Global Styles */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+    max-width: 1224px; 
+    margin: 0 auto;
+}
+
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+}
+
+/* Nav Bar 1 */
+.nav-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-1 img{
+    height: 90px;
+}
+
+/* Nav Bar 2 & Nav Links */
+
+.nav-links{
+    background: rgb(245,12,59);
+    background: linear-gradient(164deg, rgba(245,12,59,1) 0%, rgba(171,3,37,1) 100%); 
+}
+
+.nav-links ul{
+    display: flex;
+    justify-content: space-evenly;
+    /* text-transform: uppercase; */
+}
+
+
+.nav-links ul ul li a{
+    font-size: .9rem;
+}
+
+.nav-links li:hover > .dropdown li{
+    top: 0px;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav-links .dropdown li{
+    display: none;
+    position: relative;
+}
+
+.nav-links .dropdown{
+    background: rgb(245,12,59);
+    background: linear-gradient(164deg, rgba(245,12,59,1) 0%, rgba(171,3,37,1) 100%); 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-links ul li{
+    padding: 1rem;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width:  100%;
+    padding: 1rem;
+}
+
+.nav-links ul li a:hover{
+    background-color: #fff;
+    color: #DC143C;
+}
+
+/* Showcase - SlideShow */
+.showcase{
+    max-width: 1540px;
+    margin: 0 auto;
+}
+.swiper-container {
+    width: 100%;
+    height: 450px;
+}
+.swiper-slide{
+    background: rgb(245,12,59);
+    background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgba(171,3,37,1) 100%); 
+}
+.swiper-slide img{
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+ 
+.swiper-button-next, .swiper-button-prev{
+    color: #DC143C;
+}
+
+.swiper-pagination-bullet {
+    width: .8rem;
+    height: .8rem;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #DC143C;
+}
+
+/* News Room page */
+
+/* Content */
+.nr-content{
+    width: 70%;
+    margin: 2.5rem auto;
+    color: #3c4245;
+}
+.nr-content ul{
+    margin: 0 2rem;
+}
+
+.nr-content ul li{
+    list-style-type: circle;
+}
+
+.nr-content h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.nr-content h3{
+    font-size: 1.5rem;
+}
+
+/* Clinic Details */
+
+/* CD Table */
+.cd{
+    margin: 1.5rem;
+    font-weight: 600;
+}
+
+.cd h2{
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cd h3{
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+table.redTable {
+    background-color: #EEE7DB;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+table.redTable td, table.redTable th {
+    padding: .7rem 0;
+}
+
+table.redTable td{
+    border-left: 2px solid #fff;
+}
+
+table.redTable thead {
+    background: rgb(245,12,59);
+    background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgba(171,3,37,1) 100%); 
+}
+
+table.redTable tr:nth-child(even) {
+    background: #fff;
+}
+
+
+table.redTable thead th {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+table.redTable td{
+    font-size: 1rem;
+}
+
+table.redTable thead th:first-child {
+    border-left: none;
+}
+
+/* Clinic Details Doctor Show */
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex-container .a-box {
+  width: 340px;
+  text-align: center;
+}
+
+.flex-container .img-container {
+  height: 230px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 0px 0px 20px 20px;
+  display: inline-block;
+}
+
+.flex-container .img-container img {
+  height: 200px;
+  object-fit: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform .4s;
+}
+
+.flex-container .img-container img:hover{
+  transform: scale(1.17);
+}
+.flex-container .inner-skew {
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 0px;
+  margin: 30px 0px 0px 0px;
+  background: #c8c2c2;
+  height: 250px;
+  width: 200px;
+}
+
+.flex-container .text-container {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 120px 20px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+  margin: -120px 0px 0px 0px;
+  line-height: 19px;
+  font-size: 14px;
+}
+
+.flex-container .text-container h3 {
+  margin: 20px 0px 10px 0px;
+  color: #DC143C;
+  font-size: 1.1rem;
+}
+
+.flex-container .text-container a{
+  text-decoration: none;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #dc143c;
+  color: #fff;
+  border: none;
+  border-radius: .4rem;
+  font-size: .80rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.flex-container .text-container a:hover{
+  background-color: #ff0235;
+}
+
+
+/* About page */
+.about{
+    text-align: center;
+    margin: 3rem 0;
+    -webkit-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+    padding: 1rem;
+    font-weight: 600;
+
+}
+
+.about h1{
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.about p{
+    margin: .37rem 0;
+}
+
+.about img{
+    margin-top: 1rem;
+    background-color: #DC143C;
+    padding: 1rem;
+}
+
+/* Register Login Page Patients */
+.form-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img-cont{
+    width: 50%;
+    text-align: center;
+}
+.img-cont img{
+    height: 450px;
+}
+.p-form{
+    margin: 3rem 0;
+}
+.form-wrap{
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.form-wrap .title-text{
+    display: flex;
+    width: 200%;
+}
+
+  .form-wrap .title{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .form-wrap .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+  }
+  .slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+  }
+  .slide-controls label.signup{
+    color: #000;
+  }
+  .slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgb(207, 5, 45) 100%); 
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #signup:checked ~ .slider-tab{
+    left: 50%;
+  }
+  #signup:checked ~ label.signup{
+    color: #fff;
+    cursor: default;
+    user-select: none;
+  }
+  #signup:checked ~ label.login{
+    color: #000;
+  }
+  #login:checked ~ label.signup{
+    color: #000;
+  }
+  #login:checked ~ label.login{
+    cursor: default;
+    user-select: none;
+  }
+  .form-wrap .form-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-container .form-inner{
+    display: flex;
+    width: 200%;
+  }
+  .form-container .form-inner form{
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .form-inner form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  .form-inner form .field input:focus{
+    border-color: #DC143C;
+  }
+  .form-inner form .field input::placeholder{
+    color: #999;
+    transition: all 0.3s ease;
+  }
+  form .field input:focus::placeholder{
+    color: #b3b3b3;
+  }
+  .form-inner form .pass-link{
+    margin-top: 5px;
+  }
+  .form-inner form .signup-link{
+    text-align: center;
+    margin-top: 30px;
+  }
+  .form-inner form .pass-link a,
+  .form-inner form .signup-link a{
+    color: #DC143C;
+    text-decoration: none;
+  }
+  .form-inner form .pass-link a:hover,
+  .form-inner form .signup-link a:hover{
+    text-decoration: underline;
+  }
+  form .btn{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  form .btn .btn-layer{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgba(171,3,37,1) 100%); 
+    border-radius: 5px;
+    transition: all 0.4s ease;;
+  }
+  form .btn:hover .btn-layer{
+    left: 0;
+  }
+  form .btn input[type="submit"]{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-left: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .form-inner .field small{
+    font-size: 1rem;
+    color: #DC143C;
+  }
+
+  /* Admin Pages Styles */
+
+.dashboard{
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.dashboard h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+.tbl-full{
+  width: 100%;
+}
+
+.tbl-full tr th.studies{
+  width: 23%;
+}
+.tbl-full tr th.date{
+  width: 10%;
+}
+.tbl-full tr th.a_date{
+  width: 10%;
+}
+.tbl-full tr th.time{
+  width: 9%;
+}
+
+table tr td img.db_img{
+  width: 100px;
+}
+
+.tbl-30{
+  width: 40%;
+  -webkit-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+.tbl-30 input{
+  padding: 0.5rem;
+}
+.tbl-30 input:focus{
+  outline: none;
+}
+table tr th{
+  border-bottom: 1px solid black;
+  padding: 1%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+table tr td{
+  padding: 1%;
+  text-align: center;
+}
+
+
+
+.btn-primary{
+  background-color: #1e90ff;
+  padding: 1%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.3rem;
+}
+.btn-primary:hover{
+  background-color: #3742fa;
+}
+
+.btn-secondary{
+  background-color: #10ac84;
+  padding: 0.4rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3rem;
+}
+.btn-secondary:hover{
+  background-color: #1dd1a1;
+}
+
+.btn-danger{
+  background-color: #d40423;
+  padding: 0.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3rem;
+}
+.btn-danger:hover{
+  background-color: #f30327;
+}
+
+/* Patients get Appointment */
+.gap-box{
+  text-align: center;
+  margin: 3rem 0;
+  -webkit-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 58px -14px rgba(0,0,0,0.2);
+  padding: 1rem;
+  font-weight: 600;
+
+}
+
+.gap-box h1{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Appointment Page */
+.appointment{
+  margin: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appointment h1{
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+  color: #DC143C;
+  letter-spacing: 1px;
+}
+.appointment .form-appointment input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  padding: .6rem 0 .6rem 0.9rem ;
+}
+.appointment .form-appointment input:focus{
+  border-color: #DC143C;
+}
+.appointment .form-appointment input:placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+.appointment .form-appointment input:focus::placeholder{
+  color: #b3b3b3;
+}
+.appointment .form-appointment .field{
+  margin: 1rem 0;
+}
+
+.appointment .form-appointment span{
+  color: #DC143C;
+  font-weight: 800;
+}
+
+.appointment .form-appointment select{
+  font-size: 1rem;
+  width: 150px;
+}
+.appointment .form-appointment select:focus{
+  border-color: #DC143C;
+}
+
+.appointment .left-g{
+  display: flex;
+  align-items: center;
+}
+
+.appointment .left-g img{
+  width: 700px;
+}
+
+.appointment .form-appointment .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgba(171,3,37,1) 100%); 
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+
+.appointment .form-appointment .field input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Search */
+.search {
+  float: right;
+}
+
+.search span{
+  font-size: 1.2rem;
+  color: #DC143C;
+}
+
+.search select{
+  font-size: 1rem;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.search select:focus{
+  outline: none;
+}
+
+/* Footer */
+
+.foot{
+    background: rgb(245,12,59);
+    background: linear-gradient(164deg, rgb(245, 12, 35) 0%, rgba(171,3,37,1) 100%); 
+    padding: 1rem;
+    color: #fff; 
+    text-align: center;
+    z-index: 3;
+}
+
+
+.foot p{
+    font-size: 1rem;
+    line-height: 1.42857143;
+    line-height: 1.6rem;
+}
+
+/* Common Success Error Styles */
+
+.error {
+  padding: 1rem; 
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #a94442; 
+  background: #f2dede; 
+  border: 1px solid #a94442; 
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  z-index: 100;
+}
+.success {
+  padding: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #2db12f; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  z-index: 100;
+}
